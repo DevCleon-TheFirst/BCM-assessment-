@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 6: Dynamic Paragraphs &amp; Image Toggle</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1f2937;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-group {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.15s ease;
+    }
+    button:hover { background: #1d4ed8; }
+    button.secondary-btn {
+      background: #475569;
+    }
+    button.secondary-btn:hover {
+      background: #334155;
+    }
+    button.secondary-btn.active {
+      background: #dc2626;
+    }
+    hr.pair-separator {
+      border: none;
+      border-top: 2px dashed #94a3b8;
+      margin: 24px 0;
+    }
+    .hidden-image-p {
+      display: none !important;
+    }
+    .status-badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      background: #e2e8f0;
+      border-radius: 4px;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <header>
+        <h1>Question 6: DOM Manipulation &amp; State Management</h1>
+        <p id="stats" class="status-badge">Total Paragraphs: 3 | Separators: 1</p>
+      </header>
+
+      <div class="content-body" id="article-content">
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean
+lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque
+ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel
+augue laoreet rutrum faucibus dolor
+auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros</p>
+
+        <p>Integer posuere erat a ante venenatis dapibus posuere velit
+aliquet. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit
+libero, a pharetra augue. Donec sed odio dui. Integer posuere erat a ante
+venenatis dapibus posuere velit aliquet.</p>
+
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor
+ligula, eget lacinia <a href="https://www.bigcabal.com">odio sem nec
+elit. Sed posuere</a> consectetur est at <abbr title="lobortis">lbrt</abbr>. Maecenas faucibus mollis interdum. Aenean
+lacinia <img src="test.jpeg" alt="Editorial sample visual illustration" width="300" height="200"> bibendum
+nulla sed consectetur. Praesent <code><b>commodo cursus magna, vel
+scelerisque nisl consectetur et.</b></code></p>
+      </div>
+
+      <div class="btn-group" id="button-container">
+        <button id="hit-me-btn" type="button">Hit me</button>
+      </div>
+    </article>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
